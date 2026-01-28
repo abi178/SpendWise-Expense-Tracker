@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel = "stylesheet" href = "/style.css">
+</head>
+<body>
+    <div class = "container">
+
+        <h1>EXPENSE TRACKER</h1>
+
+        <form id="expense-form">
+            <input type = "text" id = "title" placeholder = "Expense/Income Title" required>
+            <input type = "number" id = "amount" placeholder="Amount" required>
+
+            <select id = "type">
+                <option value = "income">Income</option>
+                <option value = "expense">Expense</option>
+            </select>
+
+            <select id = "category">
+                <option value = "food">🍕 Food</option>
+                <option value = "transport">🚌 Transport</option>
+                <option value = "beauty">💄 Beauty</option>
+                <option value = "travel">🧳 Travel</option>
+                <option value = "shopping">🛒 Shopping</option>
+                <option value = "health">🏥 Health</option>
+                <option value = "education">📚 Education</option>
+                <option value = "others">📦 Others</option>
+                <option value = "savings">💰 Pocket Money</option>
+            </select>
+            <button type = "submit" value = "Submit">Submit</button>
+        </form>
+
+        <div class = "totals">
+            <p>Total income : <span id = "total-income">0</span></p>
+            <p>Total expense : <span id = "total-expense">0</span></p>
+            <p>Balance : <span id = "balance">0</span></p>
+         </div>
+
+         <h3>Transactions</h3>
+         <ul id = "transaction-list"></ul>
+
+        <h3>Income by Category</h3>
+        <canvas id="income-chart"></canvas>
+
+        <h3>Expenses by Category</h3>
+        <canvas id="expense-chart"></canvas>
+
+       <h3>Combined Income & Expense</h3>
+       <canvas id="combined-chart"></canvas>
+
+    </div>
+    
+    
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script src="/app.js"></script>
+</body>
+</html>
